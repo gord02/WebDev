@@ -1,0 +1,32 @@
+														
+														BOX MODELS
+													==================
+p{
+	width:200px;  /* content is blue*/
+	width:50%;
+	/*px is not the only thing that can be used percent can also be used 
+	50% of the parent element or in this case te body and the body is the page so it is then half the page*/
+padding:10px;/* padding is the space between element and border of which there was none beofre but there is 10 pixels now*/
+padding-right: 500px;
+
+margin: 100px; 100 pixels on everyside of the border between elements
+margin-left: 400px;
+
+positions
+=========
+        top right bottom left
+		/    /     /    /
+margin:20px 40px 500px 100px;
+
+margin:0 auto 0 auto; this centers the element in the middle of the page.
+ /*___________or___________*/
+margin:0 auto;
+
+border: 2px solid blue;/* there is no space between border and content*/
+}
+
+Inspection
+==========
+Blue -is the content
+orange- is the margin
+green- is padding

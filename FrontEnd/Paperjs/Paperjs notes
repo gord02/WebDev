@@ -1,0 +1,130 @@
+
+
+
+
+
+                                                      // this coresponds to radius the other to are width and height. 
+var animatedCircle = new path.Circle(new Point(300,300), 100);
+animatedCircle.fillColor = "red";
+
+function onFrame(event){
+	animatedCircle.fillColor.hue += 1;
+}//everytime page goes thorugh a new frame this will change the color hue of the circle. (which we are not in control of.)
+
+
+
+
+
+
+
+
+
+
+	var circles = [];
+
+	function onKeyDown(event){
+		var maxPoint = new Point(view.size.width, view.size.height);
+		var randomPoint = Point.random();
+		var point= maxPoint * randomPoint;
+		var newCircle = new Path.Circle(point, 500)
+		newCircle.fillColor = "purple";
+		circles.push(newCircle);
+	}
+
+var animatedCircle = new Path.Circle(new Point(300,300), 100);
+animatedCircle.fillColor = "red";
+
+function onFrame(event){
+for(var i = 0; i < circles.length; i++){
+	circles[i].fillColor.hue += 1;
+	circles[i].scale(.9);
+}
+	
+}
+
+circles are looped thorugh and added to and stored in an array
+
+
+thus us a circle in paper js
+===============================
+var animatedCircle = new Path.Circle(new Point(300,300), 100);
+animatedCircle.fillColor = "red";
+
+
+
+
+
+//this can be considred a library or nested array.
+var keyData= {
+	a:{
+		color:"purple",
+		sound: new Howl({
+			urls: ['sounds/bubbles.mp3']
+		})
+	},
+	s : {
+		color: "green"
+		sounds: new Howl({
+			urls: ['sounds/clay.mp3']
+		})
+	},
+
+	d : {
+		color: "yellow"
+		sounds: new Howl({
+			urls: ['sounds/confetti.mp3']
+		})
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================
+	<!-- circles.push(new Path.Circle(point, 10).fillColor = "purple");
+
+
+//animatedCircle.fillColor.hue += 1;
+//animatedCircle.scale(.9);
+
+
+
+if(event.key === "a"){
+			sound1.play();
+			newCircle.fillColor ="red"
+		}
+		else if(event.key === "s"){
+			sound2.play();
+			newCircle.fillColor ="#16a085"
+		}
+		else{
+			newCircle.fillColor = "purple";
+		}
+	}
+
+
+
+
+
+var sound1 = new Howl({
+	src: ['sounds/bubbles.mp3']
+});
+
+var sound2 = new Howl({
+	src: ['sounds/clay.mp3']	
+});
+
+	 -->

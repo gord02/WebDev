@@ -1,0 +1,201 @@
+BACKEND
+============
+
+
+the computer first must figure out what IP adress to send request to, udemy get request and figures out what to do wiht it
+such as asking for course so udemy goes into datbase and composes them into the course and pictures of udemy and begins 
+to render it for us to see.
+
+summary
+=======
+1.when going to url : IP address for the domain is found.
+2.HTTP request is sent asking for a partciluar page.
+3. Sever recieves request and figures out what to do with it.
+4It then responds with HTML and Javascript.
+(asks for website then gets one back).
+
+static vs dynamic webpages
+===========================
+2 types of pages dynamic web-pages are sites that are complied on the server or by the server side where the sever is pulling together or 
+contrutcing a web page  before its sent back as a response. Everything i have written so far has been static. But just 
+because a page has Dynamic content does not make it a dynamic page it has the same html and javascript eveytime
+(fundamental pieces). Dynamic websites have different content that changes along with its html ex websites like social
+media or reddit can refresh and bring new stuff everytime is it opened.
+-----------------------------------------------------------------------------------------------------------------------------
+
+stack
+stack is what language the backend programming is written of which there are many choices 
+
+
+types
+get- to recive info; asking for dat
+post- sgigining up for something or creating a comment; posting info to datbase ; sends data ;adding post to a dtabase.
+put and patch- is used to edit or update hings such as a title updating profile
+delete- is used to delete.
+
+-data can be sent through a get post but it is usally done in the form of query string (which are a part of get request) 
+this inside the seach bar and follows a question mark and is strung together by apresants. or parameters
+
+-requests can be made from different places not just browser,
+-every request has a verb or a type(get,post etc..)
+
+-a sever the thing that recives data and sends it back is just code.
+
+-users cannot create post requests inside url bars so post request are done in forms.(99% of the time)
+
+-when requests are made even ones as simple as ours we are redirected but just to the same page were notjust staying on the
+same page.we are sent away and brought back to see new info.(refresh) a rquest is always made.\
+
+-there are three parts we need the text editor(sublime), terminal(to start server) and bowser(to view)
+envirnoment/text editor, terminal
+
+
+command line
+============
+cd- to go into folder
+cd .. to go out
+ls- to see all elements in path or folder etc..
+cd + BEGGINNINGOFNAME + tab =auto complete
+touch- touch orange.txt is the syntax for creating a new file of any type.
+syntax: touch yellow.txt
+mkdir= makedirectory to make dirctory(or folder)
+syntax: mkdir FavCOlors 
+you can cd into two paths at noce by putting them on one line
+rm- used to delete a specific file
+syntax: rm FILENSME.txt
+ex: rm green.txt
+rm -rf- is used to delete folder along with everything insde them\(recsive force: this deletes all the child directories)
+rm -rf colors
+
+mkdir can be put onto the same line with a space inbetween names as well as files with the touch command
+
+mkdir Animals/AwesomeAnimals :can be used to write into files without gping into them
+ex: touch Animals/SketchyAnimals/Snakes
+
+
+
+NODEjs
+========
+is a way for us to write javascript on the server side 
+typing node in the terminal allows you to now type in javascript 
+but alert methods do not work becuase it exist with the browser so no DOM etc...
+so node can somewhat replace the use of console. 
+
+NPM
+=======
+npm-node package manager
+it is a tool that comes with nodjs which lets us install packages: javascript libraires (code that someone else wrote); it
+is easy to use. (express)
+this is used to retirve stuff such as packages or libraries. this is because script tags cannot be used becuase in nodejs 
+there is no html just javascript.
+npm the wbsite with nodejs and terminal allows you to dowlaod stuff(packages) easily by simply typing in what you would 
+like to download in the terminal or console.
+
+
+#installing and Using Packages
+===============================
+
+use 'npm install PACKAGENAME' to install a package; this dowalods it and makes/adds/saves it too node_modules
+use 'require(PACKAGENAME)' to include a package; must be saved to a varaible
+console.log(variablename());
+
+faker is helpful becuase it generates allot of fake usful data. it has real use.
+
+express framework
+==================
+code that someone else wrote that we can use
+Both frameworks and libraries are extrenal code that can be added to your own application but a libray is something that
+you are in control of beign able to use a few or many: but in frameworkd some control is given up we get to fill in the 
+blanks like a mad libs. framework take all the common stuff that we do in every application such as set up and basic things
+and pre packages all this stuff so we dont have to build it from scratch all the time. Express is a web development
+framework and their are frameworks for many other sutff such as mobile apps and games. (express is the GlUe), it is the 
+most dowloaded for nodejs.
+frameworks that are heavy using exmaple of mad libs would have a lot of text and only minimal blanks for you to fill in and
+vice versa express is very light weight.
+good tool to make web apps and flexable.
+frameworks are used to make websites etc faster.
+
+ROUTES
+routes are responsible for listening for requests (from url etc) and reciveing those requests and decides what to send 
+back depending on what the requests ask for.
+
+node + appname.js= run a file
+ctrl + C is used to escape
+
+Route syntax:
+
+// "/" => "Hi there!" this is the first route
+app.get("/", function (request, response) {
+	//request or commonly req is an object that contian all the information about the request that tirggered the route
+	res
+	//response is all the info that we are going to respond with
+});
+
+
+
+you must require the packages berfore they can be used.
+var cat = require("cat-me");
+var joke= require("knock-knock-jokes")
+
+
+package.json
+================
+
+javascrript obejct notation: adata type formating data : cotains dta 
+
+DRY code- dont repeat yourself
+
+routes Params
+==============
+
+clear- clears
+
+routes are checked and onced matched code is run and then is done it does not continue.
+**the order of routes matter.** this is becuase the get star one cannot be placed first becuase it matches everything 
+// the star operator acts as a route that is any other than the three above so anything other than those three will be sent
+ to this page.this for when user try to use a route that is undefeind. Star operator matches everything. 
+* star operator= if no other route is matched match to star.
+
+order matters for routes
+
+app.get("/r/:SubredditName", function(req, res){
+	res.send("Meow!")
+});// with the colon the tell the retriver get not to look for a url with the excat words word for word but anything that
+ has /r/: in it.
+
+app.("/r/:subredditName/comments/:id/title/")//having the colon after comment meanings that it ends their so everything 
+completetly nessary eds thier and the rout and branch of after it. comments and everything preceding it need to be there.
+
+depedencies contain a list of packages and the version number of each package thats needed in order for this app to run.
+
+templates are dynamic html files
+
+res.render("homepage.html")//this works becuase res is responmse and once data is recived from websites our website
+ chooses what to res with and in this can it choses to render something such as html
+
+emjs embeded javascript
+
+views is the first thing that express will look for.
+
+
+API
+==========
+when we use the internet we make HTTP request and get HTMl back. API's dont respond with HTML, HTML contains information 
+about the structure of a page .API's respond with data, not sturcutre. 
+They use simpler data formats like XML and JSON becuase it reomves the filler of color etc.. that is not needed when 
+communicating with a machine opppose ot someone that might need to look at the code.
+
+XML
+===
+Extended Markup Language
+xml is syntacticly silmilar to HTML but it does not describe presetation or structure like HTML such as bolded element or 
+this line is a list. there are no partcular tags and users can place whatever they want.
+
+JSON
+====
+Javascript Object Notation
+json looks exactly like javascript objects, but everything is a string; it is used to send or store data without any of the
+extra pretty html.Json and Xml can both represent the same data. Json is widley used becuase it is easly converted to
+javascript because of its similarities.
+
+JSONPlaceholder is an API 

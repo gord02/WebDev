@@ -1,0 +1,15 @@
+Creating a git repo
+
+1. git init
+Initalize the repo
+
+2. git add .
+Add all the files to the repo
+
+3. git commit -m "Initial commit"
+Add a message so you understand why you made the changes that you did
+
+4. git remote add origin REPOLINK
+set what the remote origin is on github.com
+
+5. git push origin master

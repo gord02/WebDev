@@ -1,0 +1,62 @@
+/*h1{
+
+	color:red;
+}
+
+li                                               Hexadecimal- Base 16 
+                                           0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+	color:green;                 where 0 is the lowest value and F is the highest value and 8 is middle value
+}
+h4{
+	color:purple;
+}
+*/
+
+h1{ /*the number sign is called an octothorpe.*/
+	color:#FF8000;/* ()()())()()(this would output a strong red becuase FF is the higest value in the red position and all other 
+	                values have been set to zero which is the lowest value()()())()())(. outpit is bright red*/
+}
+
+                                                /*google : hex colour picker*/
+
+h1{
+	color:rgb(240,100,);
+}
+
+h1{
+	color: rgba(0,200,0, 1);
+/*	border-color:purple;
+	border-wdith:5px;
+	border-style:solid;*/
+
+border:dashed purple 8px;
+
+	/*borders= width, color and style.*/
+}
+h2{
+	color: rgba(0,200,0, 0.6);
+
+border:8px dashed ;
+}
+h3{
+	color: rgba(0,200,0, 0.2);
+}
+
+h4{
+	background:rgb(255,100,80);
+}
+body{background:pink;}
+
+/*!!!!!!!!!!!!!!!!!!text like what follows will intefer with code. !!!!!!!!!!!!!!!!!!*/
+
+Types of backgrounds
+==============================
+/*body{background:pink;}
+body{background: url(https://i.pinimg.com/originals/95/36/4a/95364ab18c1c0922bc1a121f99bb5266.jpg);
+background-repeat: no-repeat; /*<<< if image is not large enough and therfore tilled this code can be used<<.*/
+/*background-size: cover;} /* <<< if the image does not strech to encapsulate the entire page this code can be used<<.*/
+/*/ body{*//*background :url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/wood-grain-2-ed-einboden.jpg);} */ 
+
+
+
+

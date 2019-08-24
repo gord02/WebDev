@@ -1,0 +1,208 @@
+JQUERY
+===========
+
+
+-Jquery ia a DOM manipulation library. it allows us to maniulTE the dom. makes things we alsways do eaiser such as selecting etc..
+-could be overkill when doing animation becuase it cares so much else.
+
+SELECTING WITH JQUERY
+=========================
+slecting is done with dollar sign syntax: $("selectorGoesHere")
+selecting with jquery is very simlar to queryselectorall 
+ex:
+ $("img")
+ $(".sale") this will select all elemnts wiht this class
+ $("li a")
+ $(#bonus)
+ $("ul li a")
+ $("input")
+
+dollar sign will always return a list even if there is only one element in the tag
+ex:
+ $("li")
+ [<li>Newt</li>,<li>Newt</li>, <li>Newt</li>]
+
+MANIPULATING STYKE
+==================
+
+the .css() method is jQuery's interface to styling.
+syntax:
+ $(selector).css(property, value)
+ex:
+ $("#special").css("border","2px solid red");
+ $("#special").css("color","2px solid red");
+
+var styles= {
+	color: "red"
+	background; "pink"
+	border:"2px solid purple"
+}
+ $("h1").css(styles)
+
+jquery is poweful becuase you dont have to use a loop to loop through a list of li to change them all at once a code like this ciuld be used.Mass aggain elements not needing to llop it automatically loops thorugh elements which is why it always returns a list.
+ex:
+ $("li").css("color", "blue")                     vs                    var lis= document.querySelectorAll("li")
+																		 fro(var i=0; i< lis.length; i++){
+																		 lis[i].style.color = "blue"
+																		 }
+
+ $("li").css({
+	fontSize: "10px",
+	border: "3px dashed purple",
+	background: "rgba(89, 45, 30, 0.5)"
+ });
+this would apply of of these styles at once to all li.
+=============================================================================================================================================
+
+Methods
+=======
+Methods either retrive or get information or elements and also set them by passing in an argument
+
+.text() works the same as text.content where it allows you to grab the text from elements and their decendant etc 
+ex:
+ $("h1").text();
+ //outputs the title of the page (H1 of the page)
+
+passing in a value to text allows you to change the already selcted text
+ex:
+ $("h1").text("new text");
+ //changes new text
+
+  $("li").text();
+  //this would output all text inside the li tags together with no space in between as one string. and passing in a sentece into the brackets would allow you to change all instances of text in li all at once to a certain value typed into parameter of text
+
+
+.html() gets html of selceted elemetn i.e whatever is inisde the for instance ul tag so there would be li, or body which would give many elements. this method can also be used to update whatever elemnt is selects to add/remove elements at the same time.
+ex:
+ $('ul').html("<li> HACKED </li> <li> HACKED </li> <li> HACKED </li> ");
+ // this would overite any existing li and replace the with these. also called updating
+
+ text method only treats text as text so things such as link or anchors passed in to a li would only be text not become a link. if you wanted to use anochor tags you would use html mthod.
+ for instance input should not be passed in with html becuase the user could input something that could mess with code.
+
+.attr() retrives value of attribute or sets and attribute to change element to change values. such as input text into color or input text into checkbox. is used to acces any speficif attribute and set value
+ex:
+ $("input").attr("type", "checkbox");
+
+ $("input").attr("type", "text");
+
+============================================================================================================================================
+FIRST AND LAST OF AN ELEMENT TYPE
+===================================
+ $("img:first-of-type").attr("src", "URL"); // :first-of-type is used to slecet only the first of that element type.
+ $("img").last().attr("src", "URL"); // .last() is used to slecet only the last of that element type.
+============================================================================================================================================
+
+
+ not passing in the second comment to these methods return what is in the ellemnt which is the get part and adding in the second argument updates the elements.
+
+.val() gives the value inside of elements such as input text and grabs it. if second argument is passed in it would overite what ever was in input type. 
+$("input").val(""); could be used to erase everything insde of the input. 
+
+.addClass(); adda a class. can be done to collections as well as indivliudal elements.
+.removeClass(); removes class.
+.toggleClass(); adds and removes if arleady there or not.
+**acts on a collection**
+====================================================================================================================================
+
+EVENTS
+
+.click() - allows you to add event listener same format as vanilla javascript. this works on a collection so all buttons are affected
+syntax:
+ $('#submit').click(function(){
+ 
+ });
+
+ $("button").click(function(){
+ alert("button clicked!");
+ }); anytime buttons are clicked an alret is created
+
+ .keypress() events triggered by any key by the charcter so what letter in what case(upper or lower) was pressed.
+ex:
+ $("input").keypress(function(){
+ console.log("YOU PRESSED A KEY");
+ }); everytime a key is pressed you pressed akey will  be outputed
+
+	***********************************************************************************************************************
+	 $("input").click(function(event){//now that is passed in will contain all the information about the key press        *
+	 console.log(event)                                                                                                   *
+	 });                                                                                                                  *
+	 this piece of code will keep tract of an abnduce of information pertaining to the type of key pressed on keyboard    *
+	 this can be used to log the keys pressed on a keyboard. for every key  (key code)                                    *
+	***********************************************************************************************************************
+
+
+	***********************************************************************************************************************
+	$("input").keypress(function(e){ //e is just a variable for the event but that space can be filled with anything      *
+	 if(event.which === 13){                      											                              *
+	 alert("you hit enter key")};                                                    									  *
+	 });                                                      															  *              
+	//////////////////////this code checks for a key press of enter insde an input element////////////////////            *
+	***********************************************************************************************************************
+
+.on() is an event most used in jquery event method. it is very similar to addeventlistener, but is shorter and all you have to do is 
+give it the name of what you want it to listen for. it can take the place of other method and do their function with just on method.
+ex:
+ $("h1").on("click", function(){
+ $(this).css("color","purple");
+ })//this code can be used to use on to click a specifi h1 and it will turn purple
+
+ $("input").on("keypress",function(){ 
+	 console.log("Keypressed!"); 
+	 });    //this could does the same has the previous code and listens for whenver a key is pressed
+
+ $("button").on("mouseenter",function(){ 
+	 console.log("MOUSEENTER!"); 
+	 });    //this could detect for when the mouse hovers over all buttons
+
+$("button").on("mouseleave",function(){ 
+	 $(this).css("font-weight", "bold"); 
+	 });    //this could detect for when the mouse  leaves its hovering position over the buttons and turns on bold for text
+
+click() vs on('click')
+on('click') is used for the futrue events.
+
+.remove()- removes element in essence it gets detleted
+============================================================================================================================================
+
+EFFECTS
+========
+
+jquery effects tab on jqeury.com
+
+.fadeOut()- fades something out
+ex: 
+ $("div").fadeOut();
+ 
+ $("button").on("click", function(){
+ $("div").fadeOut(1000); //1000 is time parameter in millsecods which is one full second it will take to fade out.
+ });
+ fadout does not delet it simply sets display to null therfore making them impercivable. or hiding them.
+ 
+ $("button").on("click", function(){
+ $("div").fadeOut(1000, function(){
+  console.log("fade completed!")
+  $(this).remove();
+ })
+ });// to ensure that fade completed is printed after the fadeout a callback is created(the fadeout is given its own function) and console.log is placed inside it.
+(.remove()- removes element in essence it gets detleted)
+
+.fadeIn()- fades things in :(things that can be faded in must be display zero first beofre that can be faded in)
+
+.fadeToggle(500)- will fade in or out depenind on which is needed.
+
+.slideDown()- animates the height on an element to apper from top to bottom kind of like fade in but with sliding top to bottm 
+.slideUp()
+.slideToggle(5000, function(){
+	console.log("slide is completed")          // this will only print when slide is done.
+	$(this).remove();
+});
+
+
+
+//using the keyword this allows the click to be specific to whatever li was clicked not
+// all
+
+
+.append()- adds elements to elemtne; this works by frist select an element that you want to append to and then chose what to add to such as append to ul and add an li.
+

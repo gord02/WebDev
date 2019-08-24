@@ -1,0 +1,21 @@
+/*div{
+
+	width:100px;
+	
+}*/
+
+img{
+	width:30%; this is relative to parent element which is the body which is the page.
+	float: left; /*this allows you to make the div tag/element whihch is usally a block level element but beside another one*/
+	margin:1.5%; /*calclated by counting the number of margins by 10 percent*/
+}
+p{
+	font-family: Raleway;
+	margin-left: 1.5%;
+	font-size: 24px;
+	font-weight: 800;
+	text-transform: uppercase;/* turns letter to uppercase*/
+	border-bottom:3px solid #F1F1F1;/* hexidecimal color */
+	width: 30%;
+	padding-bottom: 20px;
+}

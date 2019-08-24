@@ -1,0 +1,494 @@
+
+																JAVASCRIPT
+															====================
+
+
+5 Primitive Datatypes
+=====================
+
+//Numbers: these are not classfied as other languages its is very broad so numbers do not fit into categories such as float or int etc.. they are all counted the or treated the same by javascript. numbers is a category for whole numbers, decimal numbers and fractional numbers.
+
+Numbers:
+	4
+	9.3
+	-10
+
+javascript console can be used to do math euqations such as addition division etc.. following bedmass
+10 % 3: 10 modulos or mod 3 which calcualtes how many times 3 goes into 10 but only returns the remainder which is one.
+20 % 5= 0 how many times 5 can go into 20 and the remainder (not division)
+% is the remainder charcters called modulous
+_____________________________________________________________________________________________________________________________
+
+//Strings: strings are just text that need to be insde quotes anthing/characters numbers etc inside quotes are stirngs. string can be written with single quotes as well.they are treated the same. the quote sneed to be the same(start with double quotes and therfore must end with double quotes). Single quotes can be used in a string as long as the string is encolsed by double quotes.
+
+strings:
+	"Hello World"
+	"43"
+you can also add strings together like numbers which is called concatenation ex. "hi" + " goodbye" which would output = hi goodbye
+To write double quotes inside of a string enclosed by double quotes you must use an escape character which starts with a backslash and is a way of escaping out of a string and allows you to wrtie special charcters in a string in times were is may not be valid.
+Ex: "she said \"goodbye!\" " = " she said "goodbye!" "
+
+"hello".length= 5: "string".length property allows use to determine the number chacters or unitd taken up by the string or the length the senctence creates(including spaces.)
+another property that can be used is [#] by using this property you can get which ever charcter in the string by using the numbers starting at zero. 
+ex: "hello"[0] the first charcter is 0 which corresponds to h.
+_____________________________________________________________________________________________________________________________
+
+/Booleans: either true or false.
+ true 
+ false
+_____________________________________________________________________________________________________________________________
+
+//null and undefined: these are values
+ null 
+ undefined
+
+when a variable is defined but now intialized to anything(asigned a value) it is considered undefined. ex: var name;
+null is another way expressing nothingness or nothing undefined meaning it hasnt been assigned a vlue yet but null means the variable is nothing. ex: in a game where a player dies a variable nammed currentPlayer  would be assigned null do to the death of the player and therefore no other player remains.
+=============================================================================================================================
+
+VARIABLES
+==========
+
+is a container with a name that sotres data. the  varables are where the 5 primitive types can be stored.
+
+syntax: var yourVariableName = YourValue;
+
+ex: var name = "Rusty";
+	var secretNumber = 73;
+	var IsAdroable = true;
+
+	var name= "Rusty"
+	when ever name is called upon rusty will be outputed.
+	These values can be re-assigned by creating a another one.
+
+	var friend = sally
+	"hello there" + frined
+	frined= no one;
+	"hello there " + friend 
+	"hello there no one"
+	var num= 43;
+	num + 100;
+	= 143
+	num % 2
+	=1
+variables that once held a number can be changed to hold a string it doesnt matter. this is due to dynamic typing.
+For typing the syntax is using the first word in a name being lowercase followed by another word with uppercase this is called camel typing and snake typing is when a lowercase word is followed by an underscore or dash cash etc.. but VArialbes should use camel case.
+=============================================================================================================================
+
+BULIT-IN METHODS
+===============
+Methods are like variables that stole hundreds of lines of javascript that can be called over and over again.
+comments are done with //.
+
+//alert: pops at mesage to the user(pop message).
+ alert("Hellow there!!");
+ alert(1998 * 2);
+
+//prompt: lets us get input from the user.
+ prompt("Type name: ") this can be used to  store info form user in a variable ex: var userName = prompt("what is your name?")
+
+//console.log :prints something to the console. unless user has console open they will not be able to see it.
+ console.log("hello from the console!")
+
+//clear() is a method that wips the console clean of code 
+=============================================================================================================================
+
+BOOLEAN LOGIC
+=============
+true or flase statments; if subtotal is greater than 10 ture then excute a code or is user logged in true then reload etc..
+
+Comparison Operator
+assuming x = 5
+____________________________________________________________________________________________________________________________
+
+EQUALITY OPERATORS
+===================
+
+== vs ===
+
+javascript tries to perform type coercion which convert variables to the same type to make theme easier to process. or format to compare them. 
+
+ex:      var x = 99 ;    			 var y= null;
+         x == "99" // true  	or	 y == undefined //true
+		 x === "99" // false         y=== undefined // false
+
+tripe equals is more specific; for this operator numbers variable cannot turn into string variables using this (oprator).
+
+true == "1"
+0 == false
+null == undefined
+===========================================================================================================================
+
+Logical Operators
+&& = and opertor; if left side of and operator is false the right side must be false.
+|| is the or operator and only need one value to be true for code to be excuted. If the left side of or operator is true Javascript does not care about right side the entire statment is already true. called short-circuting
+! : not; if something was true and the not symbol was placed infornt of it, it then becomes false and vic versa. (negates stuff.)
+ex: 
+	x=9;
+	y=5; 
+	!(x==y);
+this statment would then output as true.
+All staements and inherently truthy and falsy and this can be found out be using not opertor(!) on vaules such as hello ex: an empty string is falsy. General rule: Flasy values:flase,0,"",null,undefined,NaN are all false and everything else is tuthy so even the string "false" is acutally true.
+=========================================================================================================================================
+
+JAVASCRIPT CONDITIONALS
+=========================
+
+Adds logic to programming also for making decision with code. ex: if statments two paths or outcomes ex: login to
+ex: 
+	if : checks if something and can eavalute true or flase to execute only when statment is true.
+	else if: is secondary condition this only runs if if statment  is false and therfore doesnt executes 
+	else: this will be excuted last after both of these if both if and else if returns false. else does not need conditions and therefore paranthese are not needed.
+
+	if(age < 10){
+		console.log("sorry you are too young")
+	}
+==========================================================================================================================================
+
+WHILE LOOP
+===========
+
+while(some condition){
+	some code is run 
+}
+
+ex :
+	var count=1;
+	while(count<6){
+		consol.log("count is: "+ count);
+		count++; or count+=2; to count by two
+	}this prints numbers from 1-5
+
+	var str = "hello";
+	var count=0;
+	while(count < str.length){
+		console.log(str[count]);
+	count++;
+	}
+
+	var num= 1;
+	while(num <=20){
+		if(num % 4 === 0){
+		console.log(num);
+		}
+	num++;
+	}this while loop will print out all the mutplies of 4 all the way to 20 and print them out.
+=================================================================================================================================
+FOR LOOP
+========
+
+for(init; condition; step){
+	//run some code
+}
+ex:
+	for(var count= 1; count < 6; count++){
+		console.log(count);
+	}
+
+	for(var i= 1;i <6; count++){
+		console.log
+	} the convention is to use short name like i. 
+==========================================================================================================================================
+
+FUNCTIONS
+==========
+builidng blocks of javascript
+nodej is based on javascript.
+Functions are like variables for line of code such as twenty line of code that can be recalled; reusalbe bits of code.
+
+syntax:
+	function doSomething() {
+		console.log("Hello World");
+	}
+doSomething(); this is when it is called somewhere else in the code to be executed. it wont be run until it is called.
+simply typing in the name of variable will return the value of what is inside that name but if you add the paranthese the code is run.
+
+============================================================================================================================================
+
+ARGUMENTS
+===========
+argument are how we write functions that take input. this is formed by creating a regular function but instead of empty parathense you woulf pass in an argument such as placeholder that can be named anything. this placeholder can later be filled by calling upon function and once again filling the empty brackets except with what ever data type you would like to pass in such as a number.
+
+ex:
+	function square(num) {
+		console.log(num * num);
+	}
+
+	sqaure(10); when the function is called upon
+	sqaure(4);
+	square(3);
+	square(3);
+
+	function sayHello(name) {
+		console.log("hello there " + name + "!");
+	};
+sayHello("Gordon");
+this would print out : Hellow there Gordon!
+sayHello("Mary")
+Hello there Gordon !
+
+the argument are adpative and change to whatever function we put in.
+another example:
+	function area(length, width){
+		console.log(length * width);
+	}
+area(9,2);// wil out put 18 9 coresponds to length and 2 to width: the order is what matter.
+Arguments could be used for login to websites once an account is esablished or scores in a game.
+=========================================================================================================================================
+
+Return keyword
+================
+
+there is a difference between reutrn keyword and console.log becuase when using console.log the data is not captured it is simply printed and cant be used in any other part of the code. the information doesnt last and is not sent out. to fix this return is used.
+syntax:
+
+	function square(x){
+		return x * x;
+	}
+square(4)
+16 is returned now the data is actually saved square(4) is now saved as 16 so whenver it is called upon it will output 16 ex:
+"4 sqaured is: " + square(4)
+"4 squared is: 16"
+
+every function by deufalut returns something but if it is not explicitly told what to return it returns undefined.
+return also ends the excution fo the function.
+=========================================================================================================================================
+
+setInterval() - is a function that allows you to manipluate the time code is exuctued
+
+
+anonimous function:
+
+setInterval(function(){
+console.log("I am an anonymous function!");
+console.log("THIS IS AWESOME!");
+}, 2000) //2000 refers to milisecond whihc is 2 seconds.
+============================================================================================================================================
+
+ARRAYS
+=======
+syntax:
+ var friends =["charlie","Liz","Jim","David"]
+square brackets denote an array
+arrays are also indexed each value is assigned a number based on its position that number is an index whihc looks like friends[0]
+whihc would output charlie. These can also be redefined by using friends[0]= "chuck"; Data can also be added to existing arrays by simplying adding friends[4]= "Amelie"; with a position that isnt already filled. 
+
+var frineds= []; an array yet to be fileld
+var frineds = new Array() // this is also an empty array.
+Arrays can also hold different types of data at the same time.
+Array.legnth= would tell you how many times are within the array whihc is one more than the indecies.
+
+important methods used in arrays:
+.Push() and Pop- push is used when one wants to add an element to the end of an array 
+ex.
+var colors = ["red", "orange", "yellow"];
+	colors.push("green"); this adds green to the end of the element. push takes brackets becuase it is a method and green is the argument
+.pop()- pop is used to remove the last element in an array.
+ ex: color.pop(); : pop takes no argument and return the last element in the array or the removed argument.
+ shrift and unshfit()- unshift adds elemnets to the front of an array(opposite of push) ex: colors.unshift("infared");
+.shift()- shift removes the first item of an array (opposite of unshift) and then the first element is removed and returns it to us.  
+  ex: nums.shift();
+.indexOf()- is used to find items in the array. ex: friends.indexOf ("David"); this is used to find where david is stored inside of the friends array based on which number value or position it is stored in. this method can also be used to check if item are not insde of array, this is done proven when it returns a negative 1. 
+  ex. friends.indexOf("Hagrid"); //-1
+.slice()- used to copy parts of an array : slice takes two arguments the first where cut begins and the last where it ends.
+ ex. var fruits = ['Banana', 'Orange','Lemon', 'Apple', 'Mango'];
+ var citrus= fruits.slice(1, 3); the first number is where it starts and the last number is where it stops the cut but does not include that 3 item becuase it is non- inclusive.
+ citrus is a new array formed and the orginal array fruits is unaffected and still contains the cut varaibles.
+ ex2: var nums = [1, 2, 3, "a", "b", 445, 34]
+ var letters = nums.slice(3, 5) to include only the letters
+
+array quiz
+------------
+
+1.	var numbers = [22, 67, 33, 96, 88];
+	console.log(numbers[numbers.length])
+
+this will print out undefied. this is because numbers.length is 5 and beucase numbers is diplayed with square brackets it will access the argument inside the numbers array in this case 5 which will give you undefined becuase the index goes up to 4.
+
+2.	var friendsGroups = {
+		["harry", "Ron", "hermione"],
+		["Malfoy", "Crabbe", "goyle"],
+		["Mooney", "wormtail", "Prongs"]
+	};
+console.log(friendGroup[2][0])
+this is a nested array (arrays inside of arrays) or two dimensional arrays so what this does is target the second array inside the array and then picks the [0] item in the list which is "mooney".
+===========================================================================================================================================
+
+ARRAY ITERATION
+================
+allows your to iterate through the entire array to affect each item in that array. ex; comments are stored in an array and loops thorught the array iterating the items creating html. 
+
+ex:
+
+var colors =["red","orange", "yellow","green"];
+for(var i = 0; i < colors.length; i++){
+	console.log(colors[i]); //where colors.length coreesponds the the numbers of item in array, which is one more than the indexs.
+}
+
+ForEach- provides an easy bulit-in way of iterating over an array(oppose to using loops such as for and while).
+syntax:
+ arr.forEach(someFunction)
+ex:
+ var colors =["red","orange", "yellow","green"];
+ colors.forEach(function(color){
+ console.log(color);
+ });
+var colors =["red","orange", "yellow","green"];
+ colors.forEach(function(){
+ console.log("INSIDE THR FOREACH");
+ });
+ this will iterate INSIDE THR FOREACH for every item in the array which is four therfore four time.
+colors.forEach(function(iloveDogs){
+ console.log("INSIDE THR FOREACH" + "iLoveDogs");
+ });
+which prints:		INSIDE THR FOREACH red
+					INSIDE THR FOREACH yellow
+					INSIDE THR FOREACH orange
+					INSIDE THR FOREACH green
+
+var count = 0;
+while(count < colors.length){
+	console.log(colors[count]);
+	count++;
+}
+
+arry iteration quiz
+ex 1:
+ var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ var colors =["red","orange", "yellow", "green"];
+ numbers.forEach(function(color){
+ 	if(color% 3 ==0 ){
+	 console.log(color);
+ 	}
+ }); In this array the name for the new variable is color which is confusing becuase it applies to the numbers function. the function named color is then applied to every item or number inside numbers array. in the function this means that if the number which is here defeined by the varaiable color is divisble by 3 print out that number. which will then print out 3,6 and 9.
+
+var numbers = [1,2,3,4,5,6,7,8,9,10];
+
+for(var i = 0; i = 10; i++){
+	if (i % 3 ==0){
+		console.log(i)
+	}
+};
+============================================================================================================================================
+FOREACH
+
+
+
+============================================================================================================================================
+ JAVASCRIPT OBJECTS
+=====================
+objects - are used to store data in a list that is more specific to one person and does not need to have order they hsve no build in order.
+no frist or second they are all treated the same. just like arrays objects can store any type even other objects etc...
+
+var person = {
+	name: "Travis",
+	age: 21;
+    city: "LA"; these are called keys
+}
+retriving data: console.log(person["name"]);
+
+var dog = {
+	name: "Rusty",
+	breed: "Mutt"
+	age: 3
+}
+dog (would out put entire object)
+dog["age"] to access the age 
+or
+dog.age which would output the same thing
+
+Retriving Data = **you cannot use . notation if the property starts wiht a number. or a space**
+ex:
+var person ={
+	name: "Travis",
+	age: "21",
+	city: "New york"
+};
+
+person["age"] += 1;
+____________________________________________________________________________________________________________________________________________
+
+ARRAYS vs OJECTS
+
+items in arrays are bound by indexs but objects are not list and are not bound by order ex (jello with dta values folating around in them). 
+Objects can also be thought as dictionaries where words are keys that can be accessed to find their defintions.
+
+
+var dogs = ["lucky", "Rusty", "teddy"];    	    vs 		var dog = {
+															name: "teddy",   //the name is the key
+															breed: "lab"
+														}
+dogs[1];
+//"Lucky"										vs		    dog.name
+
+an array is just a very special type of object where the keys are numbers such as indexs
+
+//adding values 											dog.age = 6;
+dogs.push("wyatt")                              vs          dog["age"] = 6;
+
+in objects things can be placed arbitraily with keys and values that i want to assign.
+//changing values
+dogs[1]= "Lucy"                                 vs          dog.breed = "black lab"
+____________________________________________________________________________________________________________________________________________
+
+NESTED OBJECTS AND ARRAYS
+==========================
+
+a list qiht each item in that list is its own object ; array of comment array of posts etc..
+var posts = {
+	 {
+		title: "Cats are mediocre",
+		author: "Colt"
+		comments:["awesome post", "terrible post"]
+	 } //post index zero would give use everything inside these brackets.
+
+	{
+		title: "cats are actually awesome"
+		author: "Cat Luvr"
+		commments: ["<3", "go to hell I hate you"]
+	}
+}
+to access "Cats are mediocre" you have to first go to posts[0] and then title so : posts[0].title
+To access the second comment in the second post you would need : posts[1].comments[1]
+
+var someObject = {	
+	friends: [
+	{name: "Malfoy"},
+	{name: "Crabble"},
+	{name: "goyle"}
+	], 
+	color; "baby blue",
+	isEvil: true
+};
+//to access "malfoy"
+someObject.friends[0].name
+(obejct > object > object)
+============================================================================================================================================
+
+method is just a function that is a propety inside of an object.
+
+add: function(x,y){
+	return x + y;
+}
+
+console is a object and log is method in that object. conosle is the parent object and log was a function declared inside the object.
+
+name space collison- when two diferent functions have the same name
+
+var catSpace = {};
+catSpace.speak = function(){
+	return "meow";
+}// this create a speak key inside catSpace
+
+THIS KYEWORD ()()(()()()()()()()()(()()()()()))
+===========================================================================================================================================
+
+THE DOM
+=========
+
+Document Object Model- interface beteween javascript and html and CSS 
+DOms are always created by the simple html pages we created. The html is turned into a bunch of javascript objects each object model an 
+element. The Dom modesl everything behind the scences as objects in a document. 
+
+
+

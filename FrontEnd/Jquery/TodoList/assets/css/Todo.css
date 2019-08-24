@@ -1,0 +1,94 @@
+body{
+	/*//background: purple;*/
+	font-family: Roboto;	
+}
+
+body{
+/*//bakcground is color gradient*/
+background: #000428;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//these are different variations of the same code so it runs on all types of browsers
+}
+
+.fa-plus{
+	float: right;/* //this moves an element over to the right*/
+}
+
+h1{
+	background: #2980b9;
+	color:white;
+	margin:0;
+	padding :10px 20px;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+ul{
+	list-style: none;/* //this reomves bullet points (which is default) */
+}
+
+li{
+	background: #fff;
+	height: 40px;
+	padding-top: 
+	line-height:40px;
+	color: #665;
+}
+
+input{
+	font-size: 18px;
+	background-color: #f7f7f7;
+	width:100%;/* //to take up entire width of container*/
+	padding:13px 13px 13px 20px;
+	box-sizing: border-box;
+	color: #2980b9;
+	border:3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus{
+/*focus effect this is the border around an ipnut called focus when one hovers over it*/
+background:#fff;
+border :3px solid #2980b9;
+outline:none;
+
+}
+
+li:nth-child(2n){/*//tragets evrey other li*/
+	background:#f7f7f7;
+}
+
+
+
+#container{
+	/*background:gray;*/
+	width:360px;
+	/*text-align: center;*/
+	margin:100px auto;
+	border:2px solid gray;
+	background:#f7f7f7;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
+}
+
+.completed{
+	color: gray;
+	text-decoration: line-through;
+}
+
+span{
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width:0px;
+	display: inline-block;
+	transition: 0.2 linear; /*//this makes animation of sliding */
+	opacity: 0;
+}
+li:hover span {
+	width:40px;
+	opacity: 1.0;
+
+}

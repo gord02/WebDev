@@ -1,0 +1,154 @@
+general rule:
+
+ selector {
+property: value;
+anotherPropertt: value;
+} 
+
+Examples:			this is called a selector
+								  /
+					h1{
+					color: purple;
+					font-size: 56px;
+					}
+					this makes all h1's purple and 56px font
+
+					img{
+					border-color: red;
+					border-width: 3px;
+					}
+					gove all img's(image tags) a 3px red border
+-------------------------------------------------------------------------------------------------------------------------------
+
+						 COLORS IN CSS
+			=========================================================
+
+HEXIDECIMAL
+==============
+
+decimal- base 10
+0,1,2,3,4,5,6,7,8,9
+_ _ _
+smallest:001 or 111
+largest:999
+
+Binary - Base 2
+using only 1 and 0's
+smallest:000
+largest:111
+_ _ _ _ _ _ _
+
+Hexadecimal- Base 16 
+0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+_ _ _ 
+the largest three digit number that could be made is FFF
+and smallest is 000.
+hexdigsts are good away of assign values to colord because of the large number of option such as 16 there for many possiblites can be made.
+
+#_ _ _ _ _ _
+this formula is not completely random becuase the first two numbers coreespond to how much red is in the color and the middle two are for how much green is in the color and the last two are for blue.
+color:#FF00FF;
+
+Color Combos
+================
+*color system is different to that of mixing paints*
+red+green= orange
+red+ green+ blue= white
+---------------------------------------------------------------------------------------------------------------------------------
+
+RGB
+======
+3 channels: Red, Green and Blue. Each ranges from 0-255
+RGB uses base 10
+
+syntax: 
+h1{           red,green,blue
+	color: rgb(0,255,0);
+}where red is zero, green is at its highest and blue is zero whihc outputs to a neon green
+
+Color Combos
+==============
+red:100+green:0+blue:100= purple
+full of every color(or channel:r,g,b) gives white
+zero for every color(or channel) gives black
+--------------------------------------------------------------------------------------------------------------------------------
+RGBA
+======
+just like RGB but there is a fourth channel called alpha which allows for colors to be transparent. A range of 0.0- 1.0
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+ELEMENT SELECTORS
+===================
+ID:
+#name{} special works in the same way a class does and vice versa only difference is that ID uses # symbol instead of a period.
+ex:
+<li id="special" > john </li> id  and a name is need to make an id selector.
+<li> George </li>
+<li> Paul </li>
+<li id="special" > Ringo </li> only those tags with id and name attribute will become styled.
+#special{color:yellow;} this now changes to style. 
+
+
+class:
+.hello{} this only calls upon the class in the CSS file but also needs to add elements to code in HTML as seen below.
+ex:
+.highlight{color: yellow;} . and the name (in this case highlihgt) given to elements is need to call upon the class selector.
+<li class="highlight" > john </li> class is need to make a class.
+<li> George </li>
+<li> Paul </li>
+<li class="highlight" > Ringo </li> only those tags with class attribute will become highlighted
+
+element:     
+li{}
+
+star:
+*{}
+
+adjecent:
+tag + tag{}
+
+nth:
+tag type:nth-of-type(3){background:purple;}
+===============================================================================================================================
+specificity
+==========
+-id are most specfic
+-classes selectors
+-decendants selectors and attribute selctors
+-type selctors are least specific types such as: li {} which are element selectors
+================================================================================================================================
+
+FONTS
+=====
+font-family= used to link to paragraph
+p{font family: Arial;
+} 
+or
+p{"font family"
+} some font need quotes if they start with numbers
+h1{font family: Georgia;}
+font-size= controls size of fonts
+h1{                                                
+	font-size: 200 px; px is a unit for pixels or 
+}
+or
+span{
+	font-size: 2.0em; this makes the font two times the size of the surrounding text
+} 2.0 means to times the size
+p{
+font-weight:bold;
+font-weight:normal;
+font-weight:100; range of 100-800
+}
+p{
+line-height:2; this would be double spacing line-height also depends on the font, it is doulbe the size of font
+}
+p{
+	text-allign:right;
+	text-allign: center;
+}
+p{
+	text-decoration:underline;
+	text-decration;line through;
+}

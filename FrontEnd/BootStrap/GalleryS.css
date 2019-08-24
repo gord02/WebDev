@@ -1,0 +1,20 @@
+.jumbotron {
+	color:#2c3e50;
+}
+
+.navbar-inverse{
+	background: #2c3e50;
+}
+/*navbar0inverse can be used to call upon the navbar*/
+
+.navbar-inverse .navbar-nav>li>a{
+	color:white;
+}
+/*to change text inside navbar to another color; it must be done like this becuase of specificty in orginal BOOTStrap code 
+which can be overwritten with this by being more specific.*/
+
+.navbar-inverse .navbar-brand{
+	color:white;
+}
+/*use inspector tool on google to to find error due to specificity.*/
+/*<i class="fas fa-camera-retro"></i>*/

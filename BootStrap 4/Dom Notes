@@ -1,0 +1,120 @@
+							
+
+																		DOM
+															=============================
+
+
+dom is works by using to parts the first is selct and the second in manipulate.
+
+-All the objects all the representation of our elements all live inside this doducment object it is the top level.
+
+
+SELECTORS
+============
+
+var tag = document.getElementById("NAMEOFID")
+var class = document.getElementByClassName("NAMEOFClass") =node list(array like )
+var tagTypes = document.getElementByTagName("TAGSTYPE") ex: ("h1"), ("body"), ("title"), ("head") 
+
+all these elements behind the scences are retruned as objects by DOM
+
+var li = document.querySelcetor("#highlight")
+var li = document.querySelcetor(".bolded")
+var h1 = document.querySelcetor("h1") 
+
+
+query replaces getElemntBY tag: but query will only output it the first of a class name not all instances. only the very first: this could be used to get body.
+
+var h1 = document.querySelcetorAll("h1")  this will select all h1.
+var h1 = document.querySelcetorAll(".bolded").
+
+can do all that getElementby and querySelcetor can.
+
+selector exercsie
+=================
+var classex = document.querySelcetorAll("#first")
+var classex = document.querySelcetor("#first")
+var classex = document.querySelcetorAll(".special")[0]
+var classex = document.querySelcetor(".special") t
+var idex = document.querySelcetor("h1 + p")
+var idex = document.querySelcetor("p")
+var idex = document.querySelcetorAll("p")[0]
+var Tagex = document.getElementByTagName("p")[0]
+var Tagex = document.getElementByClassName("special")[0] //this narrows down the selction to only the first class named special
+var Tagex = document.getElementById("first")
+
+MANIPULATION
+==============
+
+style is a property is one way to manpilate an element's style.
+The right side must be a string threfore even colors need quotes becuase it is java script rules.
+
+syntax:
+(once selected)
+h1.style.color
+
+javascript should not overlapp to much wiht CSS it should be used to turn on and off the styling
+
+ex: p.classList.add("big")// this would add an alreayd defined big class to the classList
+p.classList.remove("big")// will take it away and
+p.classList.toggle("big")// will take it away if it is already there or add it if it is not.(dos and undos) such as checking stuff.
+------------------------------------------------------------------------------------------------------------------------------------------
+textContent is editor that effects all text inside of an element :
+
+textcontent can be used to take and or manipulate text inside of node lists.
+ex: var p = document.getElementbyTagName("p")[0];
+p.textContent
+//outputs text inside p paragraph.
+
+innerHTML
+is like textcontent which allows us to return the contents of a whatever is sleceted. so it would return the same as p.textContent outputed including all other tags such as ul or li. 
+thses are two ways of grabing text 
+
+textcontent is treated and rendered as text
+but innerhtml is can be treated as <h1> tags etc.. 
+
+ex.: document.querySelector("h1").textContent= "TEXTTHATREPLACESORGINALTEXT"
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+ATTRIBUTES
+=============
+arttibutes are thinks like href and src.
+this can be used to change all links to another. 
+
+var link= document.getElementByTagName("img")[0]
+link.getAttribute("src") this would give us the link to the first image and .setAttribute("href", "http://www.google.com") would change them to be another or in this case google.
+ad the name for that new link can be changed with : a.textcontent = "NEWNAME"
+
+
+set attribute only work on idvidual obejects
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+DOM EVENTS
+==========
+we select elements and then
+Types of Events : Clicking on a button, Hovering over a link, Dragging and Dropping, Pressing the Enter key
+event listener are used to detect when the event happen. it is like a senor waiting forsomething to happen. 
+ex: listen fro a click on this button, listen for a hover event on h1, listen for key press event on text input 
+
+to add lister addEventListener 
+
+ex: 
+var h1 = doucment.querySelector("h1");
+h1 = "the element displayed first on screen"
+h1.addEventListener("click", function(){
+	alert("h1 was clicked");
+})once the h1 is clicked the alert is run.
+you can have more than one addlister pretaning to one element one after the other.
+
+doucment.querySelector("ul").addEventListener("click", function(){
+	console.log("you clicked the ul")
+})this will print this^ everytime ul is clicked.
+
+
+THIS- the keyword this inside of an event listener refers to the item or the element that the event was triggered on.
+--------------------------------------------------------------------------------------------------------------------------------------------
+syntax for eventlisteners:
+
+elemetnNAME.addEventListener("click", function(){
+	
+})

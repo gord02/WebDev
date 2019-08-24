@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<style type="text/css">
+	.pink{
+		background:pink;
+		border:1px solid purple;
+	}
+	.orange{
+		background:orange;
+		border:1px dashed red;
+		height: 50px;
+	}
+
+</style>
+
+	<title></title>
+</head>
+<body>
+	 <div class= "container">  <!-- once the column elements are outside this div and class they no longer are grids --> 
+ 		
+ 		<!-- <div class = "row"> 
+			<div class = "col-lg-2 pink"> COL LG 2</div>  this takes up 2 of the 12 units or colums 
+			<div class = "col-lg-8 pink"> COL LG 8</div> this takes up 8 of the 12 units or colums
+			<div class = "col-lg-2 pink"> COL LG 2</div>
+			 col- lg- 6 is the first class pink is the second 
+			 the col-lg-6 stands for column large and 6 units and pink is just a class created to help better see on page col-md-1
+		</div> -->
+
+
+		<div class = "row">  <!-- this class need to be intialized for it to become a grid  -->
+			<div class = "col-md-3 col-sm-6 pink">
+				<div class= "row">
+					<div class = "col-lg-6 orange"> first HALWWAY</div>
+					<div class = "col-lg-6 orange">OTHER Half</div>
+				</div>
+			</div>
+							<!-- this unit must be half of this unit to cut the grid in half when shrunken
+								  /        / -->
+			<div class = "col-lg-3 col-sm-6 pink"> TOUR DATE </div>
+			<div class = "col-lg-3 col-sm-6 pink"> TOUR DATE </div> <!-- to change size depending on window size -->
+			<div class = "col-lg-3 col-sm-6 pink"> 
+				<div class = "row">
+					<div class= "col-lg-2 orange"></div>
+					<div class= "col-lg-2 orange"></div>
+					<div class= "col-lg-2 orange"></div>
+					<div class= "col-lg-2 orange"></div>
+					<div class= "col-lg-2 orange"></div>
+					<div class= "col-lg-2 orange"></div>
+			 </div>
+		</div>
+
+	<!-- 	<div class = "row">
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+			<div class = "col-lg-1 col-md-2 pink"> COL LG 1</div>
+ by adding in the col-md-2 when tab screen is shrunk the number of colums which is 12 will reduce to 6. 
+		</div> -->
+	 </div> 
+
+</body>
+</html>

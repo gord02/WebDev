@@ -1,0 +1,83 @@
+																
+
+																JAVASCRIPT
+															====================
+
+
+5 Primitive Datatypes
+=====================
+
+//Numbers: these are not classfied as other languages its is very broad so numbers do not fit into categories such as float or int etc.. they are all counted the or treated the same by javascript. numbers is a category for whole numbers, decimal numbers and fractional numbers.
+
+NUmbers:
+4
+9.3
+-10
+
+javascript console can be used to do math euqations such as addition division etc.. following bedmass
+10 % 3: 10 modulos or mod 3 which calcualtes how many times 3 goes into 10 but only returns the remainder which is one.
+20 % 5= 0 how many times 5 can go into 20 and the remainder (not division)
+% is the remainder charcters called modulous
+_____________________________________________________________________________________________________________________________________
+
+//Strings: strings are just text that need to be insde quotes anthing/characters numbers etc inside quotes are stirngs. string can be written with single quotes as well.they are treated the same. the quote sneed to be the same(start with double quotes and therfore must end with double quotes). Single quotes can be used in a string as long as the string is encolsed by double quotes.
+
+strings:
+"Hello World"
+"43"
+you can also add strings together like numbers which is called concatenation ex. "hi" + " goodbye" which would output = hi goodbye
+To write double quotes inside of a string enclosed by double quotes you must use an escape character which starts with a backslash and is a way of escaping out of a string and allows you to wrtie special charcters in a string in times were is may not be valid.
+Ex: "she said \"goodbye!\" " = " she said "goodbye!" "
+
+"hello".length= 5: "string".length property allows use to determine the number chacters or unitd taken up by the string or the length the senctence creates(including spaces.)
+another property that can be used is [#] by using this property you can get which ever charcter in the string by using the numbers starting at zero. 
+ex: "hello"[0] the first charcter is 0 which corresponds to h.
+_____________________________________________________________________________________________________________________________________
+
+/Booleans: either true or false.
+true 
+false
+_____________________________________________________________________________________________________________________________________
+
+//null and undefined: these are values
+null 
+undefined
+
+when a variable is defined but now intialized to anything(asigned a value) it is considered undefined. ex: var name;
+null is another way expressing nothingness or nothing undefined meaning it hasnt been assigned a vlue yet but null means the variable is nothing. ex: in a game where a player dies a variable nammed currentPlayer  would be assigned null do to the death of the player and therefore no other player remains.
+=====================================================================================================================================
+
+VARIABLES
+==========
+
+is a container with a name that sotres data. the  varables are where the 5 primitive types can be stored.
+
+syntax: var yourVariableName = YourValue;
+
+ex: var name = "Rusty";
+var secretNumber = 73;
+var IsAdroable = true;
+
+var name= "Rusty"
+when ever name is called upon rusty will be outputed.
+These values can be re-assigned by creating a another one.
+
+var friend = sally
+"hello there" + frined
+frined= no one;
+"hello there " + friend 
+"hello there no one"
+var num= 43;
+num + 100;
+= 143
+num % 2
+=1
+variables that once held a number can be changed to hold a string it doesnt matter. this is due to dynamic typing.
+For typing the syntax is using the first word in a name being lowercase followed by another word with uppercase this is called camel typing and snake typing is when a lowercase word is followed by an underscore or dash cash etc.. but VArialbes should use camel case.
+=====================================================================================================================================
+
+BULIT-IN METHODS
+===============
+
+
+

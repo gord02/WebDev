@@ -1,0 +1,47 @@
+												/*TYPES OF SELECTOR*/
+										   /*============================*/
+
+/*element selector*/
+body{
+	background: orange;
+}
+/*id??*/
+#special {
+	background:yellow;
+}/*using the number symbol and the id name allows you to toggle with the element with the special id; this is the way to acess it.*/
+
+/*class*/
+.completed{
+	text-decoration: line-through; /*creates a line through text.*/
+}
+/*element*/
+li{
+border:red 5px solid;
+
+}
+/*star*/
+*{
+border:5px solid lightgrey;
+}
+/*decendents*/
+li a {
+	color: red;
+}
+li{
+	color:(#FF00FF);
+}
+/*adjecnt ;the plus makes it adjecnt wiht out it it would be decedenant*/
+h4 + ul{
+border: 4px solid black;
+}
+/*attribute*/
+a[href ="http://www.google.com"]{                 
+	background:blue;
+}/*adds a blue background to all the links to google*/
+input [type = "checkbox"]{background:blue;}
+
+ul:nth-of-type(3){background:purple;} /*only the third ul will turn purple*/
+
+li:nth-of-type(3){background:purple;} /*this would turn each li line to a purple background for every third ul beucase it is not 
+specific to just the first ul:;it selects every third of a given group.*/
+li:nth-of-type(even){background:purple;}

@@ -1,0 +1,28 @@
+table{
+	/*border:blue 10px solid;*/
+	margin:auto; /*this centers the table to be in the middle of the screen*/
+}
+h1{
+	text-align:center;
+}
+
+tr {
+	/*border:blue 100px solid;*/
+	/*border-top: blue 100px solid;*/
+	/*border-right: blue 100px solid;*/
+}
+td{
+	width: 100px;
+	height:100px;
+	/*background: pink;*/
+	/*border-right: blue 100px solid;
+	border-left: blue 100px solid;*/
+}
+.vertical{
+	border-left:1px solid black;
+	border-right:1px solid black;
+}
+.horizontal{
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}

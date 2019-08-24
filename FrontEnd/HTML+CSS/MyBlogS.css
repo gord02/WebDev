@@ -1,0 +1,57 @@
+body{ /*to create border for the entire page the body needs to be the element that takes the border property apprently :/*/
+
+border:gray 20px solid;	
+padding: 20px;
+/*margin:10px;*/
+/*margin-left:20%;
+margin-right: 20%;*/
+max-width:700px; /*this sets it so that 700 is max and the body or page will stay at 700 then shrink only when it need to not right away*/
+width:80%; /*when tab screen is less than 80 pecent it begins to shrink*/
+margin: 20px auto; /*this centered the page*/
+font-family:Source Sans Pro;
+/*font-size:10rem;*/
+} /*0 is the only value that does not need px.*/
+
+h4{
+	text-transform: uppercase;
+	color: rgb(3, 173, 252);
+	letter-spacing:0.2rem;  /*/ this add space between letters*/
+}
+
+h3{
+	font-family:Source Sans Pro;
+}
+h4{
+	font-family:Source Sans Pro;
+}
+
+p nth-of-type(1){
+	/*margin-left: 3px;*/
+	border-left: gray 5px solid;
+	/*margin:1.5%;*/
+	/*border:gray;*/
+}
+
+p nth-of-type(4)	{border-bottom:3px solid #F1F1F1;/* hexidecimal color */
+}
+
+.quote{
+border-left: gray 5px solid;
+padding-left: 5px; 
+}
+
+.line{
+	border-bottom: solid 2px gray;
+	font-weight:100;
+}
+
+/*.post {
+	border-bottom: solid 2px gray;
+}*/
+hr {
+    border: 0;
+    height: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+/**/
